@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="using:Gift_Ideas.ViewModels"
     xmlns:toastinet="using:Toastinet"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Style="{StaticResource PageStyle}">
     <Page.DataContext>
         <viewModels:UserLoginViewModel/>
     </Page.DataContext>

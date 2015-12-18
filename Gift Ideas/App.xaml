@@ -6,6 +6,16 @@
     xmlns:toastinet="using:Toastinet"
     RequestedTheme="Light">
     <Application.Resources>
+        <TransitionCollection x:Key="PageTransitionCollection" >
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+        <Style TargetType="Page" x:Key="PageStyle">
+            <Setter Property="Transitions" Value="{StaticResource PageTransitionCollection}"/>
+        </Style>
         <Style x:Key="MainButtonStyle" TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="Margin" Value="0, 30, 0, 0" />
