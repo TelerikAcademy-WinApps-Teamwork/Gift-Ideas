@@ -7,7 +7,7 @@
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Navigation;
     using Parse;
-
+    using Models;
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
@@ -25,6 +25,7 @@
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
+            ParseObject.RegisterSubclass<GiftModel>();
             ParseClient.Initialize("tubsVj8KPZ6fwh7FKUnfJPkmRjJiIFnP1Pf5DWOH", "xX7BQG5GrR3eVeN1L59ufONwSTzYXVmOnkbeqXjW");
         }
 

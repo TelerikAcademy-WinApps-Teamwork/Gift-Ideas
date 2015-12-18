@@ -5,9 +5,58 @@
     xmlns:local="using:Gift_Ideas.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModels="using:Gift_Ideas.ViewModels"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <ViewModels:GiftListViewModel x:Key="GiftListViewModel" />
+        <DataTemplate x:Key="giftItemTemplate">
+            <Grid MaxWidth="500">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding Title}"
+                           Grid.Row="0"
+                           FontSize="20"/>
+                <Image Source="{Binding Image}" 
+                       Grid.Row="1"/>
+                <StackPanel Grid.Row="2" Orientation="Horizontal">
+                    <Button Name="btnLike" 
+                            Content="✅" 
+                            Style="{StaticResource LikeButtonStyle}"/>
+                    <TextBlock Text="100"
+                               Style="{StaticResource LikeTBStyle}"/>
+                    <Button Name="btnDislike" 
+                            Content="✘"
+                            Style="{StaticResource LikeButtonStyle}"/>
+                    <TextBlock Text="20" 
+                               Style="{StaticResource LikeTBStyle}"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid Name="panelContent"
+              Grid.Row="0"
+              DataContext="{Binding Source={StaticResource GiftListViewModel}}">
+            <ListBox ItemsSource="{Binding Gifts}"
+                     ItemTemplate="{StaticResource giftItemTemplate}" >
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalContentAlignment"
+                                Value="Stretch"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </Grid>
+        <Grid Name="panelTitle"
+              Grid.Row="1">
+            <!--button bottom-->
+        </Grid>
     </Grid>
 </Page>
