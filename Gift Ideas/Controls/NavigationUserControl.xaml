@@ -33,6 +33,7 @@
         <Button Name="btnLogout"
                 Content="Logout" 
                 Grid.Column="2"
-                Style="{StaticResource NavigationButtonStyle}"/>
+                Style="{StaticResource NavigationButtonStyle}"
+                Click="OnLogoutButtonClick"/>
     </Grid>
 </UserControl>
