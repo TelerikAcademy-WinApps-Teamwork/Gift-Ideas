@@ -5,44 +5,58 @@
     xmlns:local="using:Gift_Ideas.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:Gift_Ideas.ViewModels"
+    xmlns:toastinet="using:Toastinet"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <viewModels:UserRegisterViewModel/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions >
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="180"/>
-            <RowDefinition Height="40" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <Image Source="/Assets/logo.png" 
+        <toastinet:Toastinet x:Name="Toast"
+                             Style="{StaticResource NotificationErrorStyle}"/>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Assets/logo.png" 
                Grid.Row="0"
                Grid.Column="1"
                VerticalAlignment="Center"/>
-        <TextBlock Text="Register to enjoy thousands of original gift ideas!" 
+            <TextBlock Text="Register to enjoy thousands of original gift ideas!" 
                    Grid.Row="1"
                    Grid.Column="1"
                    Style="{StaticResource LogoTextBlockStyle}"/>
-        <ItemsControl Grid.Row="2" Grid.Column="1">
-            <TextBox Name="tbUsername"
-                     PlaceholderText="Username"/>
-            <TextBox Name="tbEmail"
-                     PlaceholderText="Email"/>
-            <PasswordBox Name="tbPassword"
-                         PlaceholderText="Password"/>
-            <Button Name="btnRegister"
+            <ItemsControl Name="icRegister"
+                      Grid.Row="2" 
+                      Grid.Column="1">
+                <TextBox Name="tbUsername"
+                     PlaceholderText="Username"
+                     Text="{Binding Username, Mode=TwoWay}"/>
+                <TextBox Name="tbEmail"
+                     PlaceholderText="Email"
+                     Text="{Binding Email, Mode=TwoWay}"/>
+                <PasswordBox Name="tbPassword"
+                         PlaceholderText="Password"
+                         Password="{Binding Password, Mode=TwoWay}"/>
+                <Button Name="btnRegister"
                     Content="Register"
-                    Style="{StaticResource MainButtonStyle}"/>
-        </ItemsControl>
-        <Button Name="btnLogin"
+                    Style="{StaticResource MainButtonStyle}"
+                    Click="OnRegisterButtonClick"/>
+            </ItemsControl>
+            <Button Name="btnLogin"
                 Grid.Row="3"
                 Grid.Column="1"
                 Content="Login"
                 Click="OnLoginButtonClick"
                 Style="{StaticResource BottomPageButtonStyle}"/>
+        </Grid>
     </Grid>
 </Page>

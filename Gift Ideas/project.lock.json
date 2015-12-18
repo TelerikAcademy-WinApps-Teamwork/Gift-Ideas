@@ -232,6 +232,16 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.0, )",
@@ -1566,6 +1576,14 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-arm": {
@@ -1839,6 +1857,16 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -3222,6 +3250,14 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
@@ -3481,6 +3517,16 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -4849,6 +4895,14 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
         }
       }
     },
@@ -5130,6 +5184,16 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.0, )",
@@ -6511,6 +6575,14 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
@@ -6770,6 +6842,16 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -8138,6 +8220,14 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
         }
       }
     },
@@ -8419,6 +8509,16 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.0, )",
@@ -9800,6 +9900,14 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
@@ -10059,6 +10167,16 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Parse/1.6.2": {
+        "compile": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Parse.dll": {},
+          "lib/netcore45/Parse.WinRT.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -11427,6 +11545,14 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Toastinet/2.8.0": {
+        "compile": {
+          "lib/uap10.0/Toastinet.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Toastinet.dll": {}
         }
       }
     }
@@ -12133,6 +12259,38 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "Parse/1.6.2": {
+      "sha512": "ptz+qcrq6qpnITa1902QUr0OvWSLyODyurUlWtENrPGidW+hhGPziQA8h5HLlCZPxHMkN7/xe0/c+hTUv+HguA==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "lib/MonoAndroid/Parse.Android.dll",
+        "lib/MonoAndroid/Parse.Android.xml",
+        "lib/MonoTouch10/Parse.iOS.dll",
+        "lib/MonoTouch10/Parse.iOS.xml",
+        "lib/net45/Parse.dll",
+        "lib/net45/Parse.NetFx45.dll",
+        "lib/net45/Parse.NetFx45.xml",
+        "lib/net45/Parse.xml",
+        "lib/netcore45/Parse.dll",
+        "lib/netcore45/Parse.WinRT.dll",
+        "lib/netcore45/Parse.WinRT.xml",
+        "lib/netcore45/Parse.xml",
+        "lib/wp8/Parse.dll",
+        "lib/wp8/Parse.Phone.dll",
+        "lib/wp8/Parse.Phone.xml",
+        "lib/wp8/Parse.xml",
+        "lib/wpa81/Parse.dll",
+        "lib/wpa81/Parse.WinRT.dll",
+        "lib/wpa81/Parse.WinRT.xml",
+        "lib/wpa81/Parse.xml",
+        "lib/Xamarin.iOS10/Parse.iOS.dll",
+        "lib/Xamarin.iOS10/Parse.iOS.xml",
+        "package/services/metadata/core-properties/474be0e8c50f448eb2093aca43c8dd6f.psmdcp",
+        "Parse.nuspec"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -14829,6 +14987,38 @@
         "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll",
         "System.Xml.XmlSerializer.nuspec"
       ]
+    },
+    "Toastinet/2.8.0": {
+      "sha512": "IwgjTt6PYo1zRZvtPpq8AbUBR8egUQw2yaNRFZ4xq1ZU8xWhL74ZSEGqatMHOGbYgIc/p7eI2X1uewihglhYkw==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "lib/net45/ToastinetWPF.dll",
+        "lib/netcore451/Toastinet.dll",
+        "lib/sl50/Toastinet.dll",
+        "lib/uap10.0/Resources/ApplicationStyles.xbf",
+        "lib/uap10.0/Toastinet.dll",
+        "lib/uap10.0/Toastinet.pdb",
+        "lib/uap10.0/Toastinet.pri",
+        "lib/uap10.0/Toastinet.xbf",
+        "lib/uap10.0/Toastinet/Properties/Toastinet.rd.xml",
+        "lib/uap10.0/Toastinet/Toastinet.xr.xml",
+        "lib/win81/Toastinet.dll",
+        "lib/win81/Toastinet.pri",
+        "lib/win81/Toastinet/Toastinet.xaml",
+        "lib/win81/Toastinet/Toastinet.xbf",
+        "lib/win81/Toastinet/Toastinet.xr.xml",
+        "lib/wp8/Toastinet.dll",
+        "lib/wp81/Toastinet.dll",
+        "lib/wpa81/Toastinet.dll",
+        "lib/wpa81/Toastinet.pri",
+        "lib/wpa81/Toastinet/Toastinet.xaml",
+        "lib/wpa81/Toastinet/Toastinet.xbf",
+        "lib/wpa81/Toastinet/Toastinet.xr.xml",
+        "package/services/metadata/core-properties/f146bbf2239a40f5a6be3ccffdc6eca9.psmdcp",
+        "Toastinet.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -14836,7 +15026,9 @@
       "Microsoft.ApplicationInsights >= 1.0.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
+      "Parse >= 1.6.2",
+      "Toastinet >= 2.8.0"
     ],
     "UAP,Version=v10.0": []
   }

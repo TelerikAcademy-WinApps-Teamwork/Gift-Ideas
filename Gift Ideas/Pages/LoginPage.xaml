@@ -5,9 +5,15 @@
     xmlns:local="using:Gift_Ideas.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:Gift_Ideas.ViewModels"
+    xmlns:toastinet="using:Toastinet"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <viewModels:UserLoginViewModel/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <toastinet:Toastinet x:Name="Toast"
+                             Style="{StaticResource NotificationErrorStyle}"/>
         <Grid>
             <Grid.RowDefinitions >
                 <RowDefinition Height="1*"/>
@@ -30,12 +36,15 @@
                    Style="{StaticResource LogoTextBlockStyle}"/>
             <ItemsControl Grid.Row="2" Grid.Column="1">
                 <TextBox Name="tbUsername"
-                     PlaceholderText="Username"/>
+                         PlaceholderText="Username"
+                         Text="{Binding Username, Mode=TwoWay}"/>
                 <PasswordBox Name="tbPassword"
-                         PlaceholderText="Password"/>
+                             PlaceholderText="Password"
+                             Password="{Binding Password, Mode=TwoWay}"/>
                 <Button Name="btnLogin"
-                    Content="Login"
-                    Style="{StaticResource MainButtonStyle}"/>
+                        Content="Login"
+                        Style="{StaticResource MainButtonStyle}"
+                        Click="OnLoginButtonClick"/>
             </ItemsControl>
             <Button Name="btnRegister"
                     Grid.Row="3"

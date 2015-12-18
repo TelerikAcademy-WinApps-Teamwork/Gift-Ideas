@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Gift_Ideas"
+    xmlns:toastinet="using:Toastinet"
     RequestedTheme="Light">
     <Application.Resources>
         <Style x:Key="MainButtonStyle" TargetType="Button">
@@ -19,6 +20,18 @@
             <Setter Property="TextWrapping" Value="Wrap" />
             <Setter Property="FontSize" Value="20" />
             <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="NotificationErrorStyle" TargetType="toastinet:Toastinet">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Height" Value="100" />
+            <Setter Property="FontSize" Value="23" />
+            <Setter Property="AnimationType" Value="Rotation" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Canvas.ZIndex" Value="1" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Duration" Value="2" />
+            <Setter Property="Opacity" Value="0.6" />
         </Style>
     </Application.Resources>
 </Application>

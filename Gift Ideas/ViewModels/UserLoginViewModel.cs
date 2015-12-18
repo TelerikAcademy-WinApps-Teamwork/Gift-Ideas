@@ -2,7 +2,7 @@
 {
     public class UserLoginViewModel
     {
-        public string Email { get; set; }
+        public string Username { get; set; }
 
         public string Password { get; set; }
 
@@ -11,9 +11,9 @@
         {
         }
 
-        public UserLoginViewModel(string email, string password)
+        public UserLoginViewModel(string username, string password)
         {
-            this.Email = email;
+            this.Username = username;
             this.Password = password;
         }
     }

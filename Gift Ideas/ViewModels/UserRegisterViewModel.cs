@@ -1,6 +1,6 @@
 ﻿namespace Gift_Ideas.ViewModels
 {
-    public class UserRegisterViewModel
+    public class UserRegisterViewModel : ViewModelBase
     {
         public string Email { get; set; }
 
