@@ -1,15 +1,7 @@
 ﻿namespace Gift_Ideas
 {
     using Gift_Ideas.Pages;
-    using Models;
     using Parse;
-    using SQLite.Net;
-    using SQLite.Net.Async;
-    using SQLite.Net.Platform.WinRT;
-    using System;
-    using System.IO;
-    using Windows.Storage;
-    using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
 
     public sealed partial class MainPage : Page

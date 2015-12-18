@@ -2,9 +2,11 @@
 {
     using Pages;
     using Parse;
+    using System;
+    using Windows.Media.Capture;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
-
+    using Windows.UI.Xaml.Media.Imaging;
     public sealed partial class NavigationUserControl : UserControl
     {
         public NavigationUserControl()
@@ -21,6 +23,14 @@
         {
             ParseUser.LogOut();
             ((Frame)Window.Current.Content).Navigate(typeof(LoginPage), null);
+        }
+
+        private async void OnAddGiftButtonClick(object sender, RoutedEventArgs e)
+        {
+            var camera = new CameraCaptureUI();
+            var photo = await camera.CaptureFileAsync(CameraCaptureUIMode.Photo);
+            var imageSource = new BitmapImage(new Uri(photo.Path));
+            ((Frame)Window.Current.Content).Navigate(typeof(AddGiftPage), imageSource);
         }
     }
 }

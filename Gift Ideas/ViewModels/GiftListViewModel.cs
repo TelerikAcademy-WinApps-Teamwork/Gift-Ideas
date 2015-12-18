@@ -3,17 +3,32 @@
     using System.Linq;
     using Models;
     using Parse;
-    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
 
     public class GiftListViewModel : ViewModelBase
     {
         private ObservableCollection<GiftViewModel> gifts;
+        private string areGiftsLoading;
 
         public GiftListViewModel()
         {
+            this.AreGiftsLoading = "True";
             this.LoadGifts();
+        }
+
+        public string AreGiftsLoading
+        {
+            get { return this.areGiftsLoading; }
+
+            set
+            {
+                if (value != this.areGiftsLoading)
+                {
+                    this.areGiftsLoading = value;
+                    base.RaisePropertyChanged("AreGiftsLoading");
+                }
+            }
         }
 
         private async void LoadGifts()
@@ -29,6 +44,8 @@
                 Age = model.TargetPersonAge,
                 Image = model.Image.Url
             });
+
+            this.AreGiftsLoading = "False";
         }
 
         public IEnumerable<GiftViewModel> Gifts

@@ -29,7 +29,8 @@
         <Button Name="btnAddGift"
                 Content="Add gift" 
                 Grid.Column="1"
-                Style="{StaticResource NavigationButtonStyle}"/>
+                Style="{StaticResource NavigationButtonStyle}"
+                Click="OnAddGiftButtonClick"/>
         <Button Name="btnLogout"
                 Content="Logout" 
                 Grid.Column="2"

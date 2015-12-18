@@ -38,14 +38,14 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"          
+          DataContext="{Binding Source={StaticResource GiftListViewModel}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Grid Name="panelContent"
-              Grid.Row="0"
-              DataContext="{Binding Source={StaticResource GiftListViewModel}}">
+              Grid.Row="0">
             <ListBox ItemsSource="{Binding Gifts}"
                      ItemTemplate="{StaticResource giftItemTemplate}" >
                 <ListBox.ItemContainerStyle>
@@ -56,8 +56,9 @@
                 </ListBox.ItemContainerStyle>
             </ListBox>
         </Grid>
+        <ProgressRing IsActive="{Binding AreGiftsLoading, Mode=TwoWay}" Name="ProgressRing" />
         <Grid Name="navigation"
-              Grid.Row="1">
+              Grid.Row="2">
             <UserControls:NavigationUserControl />
         </Grid>
     </Grid>
