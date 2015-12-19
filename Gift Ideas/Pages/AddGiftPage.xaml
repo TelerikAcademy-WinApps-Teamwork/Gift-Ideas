@@ -33,7 +33,8 @@
                 </Grid.ColumnDefinitions>
                 <Image Name="GiftImage" 
                            Grid.Column="1"
-                           Grid.Row="0"/>
+                           Grid.Row="0"
+                           Margin="0,0,0,15"/>
                 <ItemsControl Grid.Row="1" Grid.Column="1">
                     <TextBox PlaceholderText="Title"
                              Text="{Binding Title, Mode=TwoWay}"/>
@@ -45,6 +46,9 @@
                              Text="{Binding Shop, Mode=TwoWay}"/>
                     <TextBox PlaceholderText="Price"
                              Text="{Binding Price, Mode=TwoWay}"/>
+                    <CheckBox Name="LocationCheckBox"
+                              Content="add location as store"
+                              Checked="OnAddLocationChecked" />
                     <Button Name="btnSave"
                             Content="Save"
                             Style="{StaticResource MainButtonStyle}"

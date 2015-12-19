@@ -6,6 +6,7 @@
     using System;
     using System.Net;
     using System.Threading.Tasks;
+    using Windows.Devices.Geolocation;
     using Windows.Storage;
     using Windows.Storage.Streams;
     using Windows.UI.Xaml;
@@ -51,6 +52,14 @@
             await file.SaveAsync();
 
             giftModel.Image = file;
+
+            if (this.LocationCheckBox.IsChecked.Value == true)
+            {
+                var geolocator = new Geolocator();
+                var geoPosition = await geolocator.GetGeopositionAsync();
+                var point = new ParseGeoPoint(geoPosition.Coordinate.Latitude, geoPosition.Coordinate.Longitude);
+                giftModel.Location = point;
+            }
 
             try
             {
@@ -104,6 +113,11 @@
                 }
             }
             return fileBytes;
+        }
+
+        private async void OnAddLocationChecked(object sender, RoutedEventArgs e)
+        {
+            await Geolocator.RequestAccessAsync();
         }
     }
 }

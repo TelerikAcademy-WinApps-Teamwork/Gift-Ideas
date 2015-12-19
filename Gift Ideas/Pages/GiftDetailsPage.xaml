@@ -34,7 +34,7 @@
                                 <Button Name="btnLike" 
                             Content="✅" 
                             Style="{StaticResource LikeButtonStyle}"/>
-                                <TextBlock Text="100"
+                                <TextBlock Text="120"
                                Style="{StaticResource LikeTBStyle}"/>
                                 <Button Name="btnDislike" 
                             Content="✘"
