@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:userControls="using:Gift_Ideas.Controls"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d"
     Style="{StaticResource PageStyle}">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -15,10 +16,10 @@
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
                 <Grid Grid.Row="0">
-                    <ItemsControl>
-                        <Grid MaxWidth="500" Padding="15">
+                    <ItemsControl MaxWidth="500">
+                        <Grid Padding="15">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="1*" />
@@ -44,6 +45,7 @@
                             </StackPanel>
                             <Grid Grid.Row="3" Margin="0,20">
                                 <Grid.RowDefinitions>
+                                    <RowDefinition/>
                                     <RowDefinition/>
                                     <RowDefinition/>
                                     <RowDefinition/>
@@ -85,6 +87,18 @@
                                        FontSize="20"
                                        Grid.Row="3"
                                        Grid.Column="1"/>
+                                <Button Name="btnLocation"
+                                        Content="Show shop location"
+                                        Click="OnLocationButtonClick"
+                                        Grid.Row="4"
+                                        Grid.ColumnSpan="2"
+                                        Visibility="Collapsed"/>
+                                <Maps:MapControl Name="map" 
+                                        Grid.Row="4"
+                                        Grid.ColumnSpan="2"
+                                        Visibility="Collapsed"
+                                        MapServiceToken="sSsTsivhZQNwHhBc3n95~B-ePys5AGIZ06NP5tWa71A~AquVpSSJumKTyYAWAGtH6UbUqbxrw7pVWPpPereg1TXpkHFiqzvyf8EAv6c2Zfa5"/>
+
                             </Grid>
                         </Grid>
                     </ItemsControl>

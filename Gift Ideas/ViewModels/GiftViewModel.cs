@@ -16,5 +16,7 @@
         public string TargetPerson { get; set; }
 
         public string Age { get; set; }
+
+        public double[] Location { get; set; }
     }
 }

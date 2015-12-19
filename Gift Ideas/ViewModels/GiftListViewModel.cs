@@ -42,7 +42,8 @@
                 Shop = model.Shop,
                 TargetPerson = model.TargetPerson,
                 Age = model.TargetPersonAge.ToString(),
-                Image = model.Image.Url
+                Image = model.Image.Url,
+                Location = new double[] { model.Location.Latitude, model.Location.Longitude }
             });
 
             this.AreGiftsLoading = "False";
