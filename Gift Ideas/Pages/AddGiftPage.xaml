@@ -5,9 +5,56 @@
     xmlns:local="using:Gift_Ideas.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
+    xmlns:viewModels="using:Gift_Ideas.ViewModels"   
+    xmlns:UserControls="using:Gift_Ideas.Controls"
+    xmlns:toastinet="using:Toastinet"
+    mc:Ignorable="d"
+    Style="{StaticResource PageStyle}">
+    <Page.DataContext>
+        <viewModels:GiftViewModel/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image Name="GiftImage" Source="{Binding DataCo}" />
+        <toastinet:Toastinet x:Name="Toast"
+                             Style="{StaticResource NotificationErrorStyle}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="250"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Name="GiftImage" 
+                           Grid.Column="1"
+                           Grid.Row="0"/>
+                <ItemsControl Grid.Row="1" Grid.Column="1">
+                    <TextBox PlaceholderText="Title"
+                             Text="{Binding Title, Mode=TwoWay}"/>
+                    <TextBox PlaceholderText="Target Person"
+                             Text="{Binding TargetPerson, Mode=TwoWay}"/>
+                    <TextBox PlaceholderText="Target Person Age"
+                             Text="{Binding Age, Mode=TwoWay}"/>
+                    <TextBox PlaceholderText="Shop Name"
+                             Text="{Binding Shop, Mode=TwoWay}"/>
+                    <TextBox PlaceholderText="Price"
+                             Text="{Binding Price, Mode=TwoWay}"/>
+                    <Button Name="btnSave"
+                            Content="Save"
+                            Style="{StaticResource MainButtonStyle}"
+                            Click="OnSaveButtonClick"/>
+                </ItemsControl>
+            </Grid>
+            <Grid Name="navigation"
+              Grid.Row="1">
+                <UserControls:NavigationUserControl />
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

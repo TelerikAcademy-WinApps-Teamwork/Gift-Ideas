@@ -38,10 +38,10 @@
             this.Gifts = gifts.AsQueryable().Select(model => new GiftViewModel
             {
                 Title = model.Title,
-                Price = model.Price,
+                Price = model.Price.ToString(),
                 Shop = model.Shop,
                 TargetPerson = model.TargetPerson,
-                Age = model.TargetPersonAge,
+                Age = model.TargetPersonAge.ToString(),
                 Image = model.Image.Url
             });
 

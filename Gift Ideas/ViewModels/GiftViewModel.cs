@@ -9,12 +9,12 @@
 
         public Uri Image { get; set; }
 
-        public int Price { get; set; }
+        public string Price { get; set; }
 
         public string Shop { get; set; }
 
         public string TargetPerson { get; set; }
 
-        public int Age { get; set; }
+        public string Age { get; set; }
     }
 }

@@ -41,7 +41,19 @@
             <Setter Property="Canvas.ZIndex" Value="1" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="Duration" Value="2" />
-            <Setter Property="Opacity" Value="0.6" />
+            <Setter Property="Opacity" Value="0.8" />
+        </Style>
+        <Style x:Key="NotificationSuccessStyle" TargetType="toastinet:Toastinet">
+            <Setter Property="Background" Value="Green" />
+            <Setter Property="Height" Value="100" />
+            <Setter Property="FontSize" Value="23" />
+            <Setter Property="AnimationType" Value="Rotation" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="Canvas.ZIndex" Value="1" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Duration" Value="2" />
+            <Setter Property="Opacity" Value="0.8" />
         </Style>
         <Style x:Key="LikeButtonStyle" TargetType="Button">
             <Setter Property="Height" Value="40" />

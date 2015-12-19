@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModels="using:Gift_Ideas.ViewModels"
     xmlns:UserControls="using:Gift_Ideas.Controls"
+    xmlns:toastinet="using:Toastinet"
     mc:Ignorable="d"
     Style="{StaticResource PageStyle}">
     <Page.Resources>
@@ -40,26 +41,30 @@
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"          
           DataContext="{Binding Source={StaticResource GiftListViewModel}}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
-        <Grid Name="panelContent"
-              Grid.Row="0">
-            <ListBox ItemsSource="{Binding Gifts}"
-                     ItemTemplate="{StaticResource giftItemTemplate}" >
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="ListBoxItem">
-                        <Setter Property="HorizontalContentAlignment"
-                                Value="Stretch"/>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-            </ListBox>
-        </Grid>
-        <ProgressRing IsActive="{Binding AreGiftsLoading, Mode=TwoWay}" Name="ProgressRing" />
-        <Grid Name="navigation"
-              Grid.Row="2">
-            <UserControls:NavigationUserControl />
+        <toastinet:Toastinet x:Name="Toast"
+                             Style="{StaticResource NotificationSuccessStyle}"/>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid Name="panelContent"
+                  Grid.Row="0">
+                <ListBox ItemsSource="{Binding Gifts}"
+                         ItemTemplate="{StaticResource giftItemTemplate}" >
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="HorizontalContentAlignment"
+                                    Value="Stretch"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+            </Grid>
+            <ProgressRing IsActive="{Binding AreGiftsLoading, Mode=TwoWay}" Name="ProgressRing" />
+            <Grid Name="navigation"
+                  Grid.Row="2">
+                <UserControls:NavigationUserControl />
+            </Grid>
         </Grid>
     </Grid>
 </Page>

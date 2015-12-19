@@ -29,8 +29,10 @@
         {
             var camera = new CameraCaptureUI();
             var photo = await camera.CaptureFileAsync(CameraCaptureUIMode.Photo);
-            var imageSource = new BitmapImage(new Uri(photo.Path));
-            ((Frame)Window.Current.Content).Navigate(typeof(AddGiftPage), imageSource);
+            if (photo != null)
+            {
+                ((Frame)Window.Current.Content).Navigate(typeof(AddGiftPage), photo);
+            }
         }
     }
 }
