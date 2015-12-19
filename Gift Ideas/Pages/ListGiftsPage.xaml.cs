@@ -1,5 +1,6 @@
 ﻿namespace Gift_Ideas.Pages
 {
+    using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Navigation;
 
@@ -26,6 +27,12 @@
             {
                 this.message = e.Parameter as string;
             }
+        }
+
+        private void OnGiftDetailsButtonClick(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            this.Frame.Navigate(typeof(GiftDetailsPage), button.DataContext);
         }
     }
 }

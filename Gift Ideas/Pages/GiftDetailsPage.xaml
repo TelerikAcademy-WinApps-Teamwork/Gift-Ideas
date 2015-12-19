@@ -4,10 +4,96 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Gift_Ideas.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:userControls="using:Gift_Ideas.Controls"
     mc:Ignorable="d"
     Style="{StaticResource PageStyle}">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
 
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid Grid.Row="0">
+                    <ItemsControl>
+                        <Grid MaxWidth="500" Padding="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="50" />
+                                <RowDefinition Height="200" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding Title}"
+                           Grid.Row="0"
+                           FontSize="20"/>
+                            <Image Source="{Binding Image}"
+                               Grid.Row="1"/>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <Button Name="btnLike" 
+                            Content="✅" 
+                            Style="{StaticResource LikeButtonStyle}"/>
+                                <TextBlock Text="100"
+                               Style="{StaticResource LikeTBStyle}"/>
+                                <Button Name="btnDislike" 
+                            Content="✘"
+                            Style="{StaticResource LikeButtonStyle}"/>
+                                <TextBlock Text="20" 
+                               Style="{StaticResource LikeTBStyle}"/>
+                            </StackPanel>
+                            <Grid Grid.Row="3" Margin="0,20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Target: "
+                                       FontSize="20"
+                                       Grid.Row="0"
+                                       Grid.Column="0"/>
+                                <TextBlock Text="{Binding TargetPerson}"
+                                       FontSize="20"
+                                       Grid.Row="0"
+                                       Grid.Column="1"/>
+                                <TextBlock Text="Target age: "
+                                       FontSize="20"
+                                       Grid.Row="1"
+                                       Grid.Column="0"/>
+                                <TextBlock Text="{Binding Age}"
+                                       FontSize="20"
+                                       Grid.Row="1"
+                                       Grid.Column="1"/>
+                                <TextBlock Text="Shop: "
+                                       FontSize="20"
+                                       Grid.Row="2"
+                                       Grid.Column="0"/>
+                                <TextBlock Text="{Binding Shop}"
+                                       FontSize="20"
+                                       Grid.Row="2"
+                                       Grid.Column="1"/>
+                                <TextBlock Text="Price: "
+                                       FontSize="20"
+                                       Grid.Row="3"
+                                       Grid.Column="0"/>
+                                <TextBlock Text="{Binding Price}"
+                                       FontSize="20"
+                                       Grid.Row="3"
+                                       Grid.Column="1"/>
+                            </Grid>
+                        </Grid>
+                    </ItemsControl>
+                </Grid>
+            </ScrollViewer>
+            <Grid Name="navigation"
+                  Grid.Row="1">
+                <userControls:NavigationUserControl />
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

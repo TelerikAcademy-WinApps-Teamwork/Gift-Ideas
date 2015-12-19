@@ -13,7 +13,7 @@
     <Page.Resources>
         <ViewModels:GiftListViewModel x:Key="GiftListViewModel" />
         <DataTemplate x:Key="giftItemTemplate">
-            <Grid MaxWidth="500">
+            <Grid MaxWidth="500" Padding="15" BorderBrush="Black" BorderThickness="0, 1, 0, 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30" />
                     <RowDefinition Height="1*" />
@@ -22,8 +22,12 @@
                 <TextBlock Text="{Binding Title}"
                            Grid.Row="0"
                            FontSize="20"/>
-                <Image Source="{Binding Image}" 
-                       Grid.Row="1"/>
+                <Button Padding="0"
+                        BorderThickness="0"
+                        Grid.Row="1"
+                        Click="OnGiftDetailsButtonClick">
+                    <Image Source="{Binding Image}"/>
+                </Button>
                 <StackPanel Grid.Row="2" Orientation="Horizontal">
                     <Button Name="btnLike" 
                             Content="✅" 
@@ -50,19 +54,17 @@
             </Grid.RowDefinitions>
             <Grid Name="panelContent"
                   Grid.Row="0">
-                <ListBox ItemsSource="{Binding Gifts}"
-                         ItemTemplate="{StaticResource giftItemTemplate}" >
-                    <ListBox.ItemContainerStyle>
-                        <Style TargetType="ListBoxItem">
-                            <Setter Property="HorizontalContentAlignment"
-                                    Value="Stretch"/>
-                        </Style>
-                    </ListBox.ItemContainerStyle>
-                </ListBox>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding Gifts}"
+                                  ItemTemplate="{StaticResource giftItemTemplate}" 
+                                  HorizontalAlignment="Stretch"
+                                  Padding="10">
+                    </ItemsControl>
+                </ScrollViewer>
             </Grid>
             <ProgressRing IsActive="{Binding AreGiftsLoading, Mode=TwoWay}" Name="ProgressRing" />
             <Grid Name="navigation"
-                  Grid.Row="2">
+                  Grid.Row="1">
                 <UserControls:NavigationUserControl />
             </Grid>
         </Grid>
