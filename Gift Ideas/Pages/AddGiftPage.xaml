@@ -21,40 +21,42 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="250"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <Image Name="GiftImage" 
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="300"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="GiftImage" 
                            Grid.Column="1"
                            Grid.Row="0"
                            Margin="0,0,0,15"/>
-                <ItemsControl Grid.Row="1" Grid.Column="1">
-                    <TextBox PlaceholderText="Title"
+                    <ItemsControl Grid.Row="1" Grid.Column="1">
+                        <TextBox PlaceholderText="Title"
                              Text="{Binding Title, Mode=TwoWay}"/>
-                    <TextBox PlaceholderText="Target Person"
+                        <TextBox PlaceholderText="Target Person"
                              Text="{Binding TargetPerson, Mode=TwoWay}"/>
-                    <TextBox PlaceholderText="Target Person Age"
+                        <TextBox PlaceholderText="Target Person Age"
                              Text="{Binding Age, Mode=TwoWay}"/>
-                    <TextBox PlaceholderText="Shop Name"
+                        <TextBox PlaceholderText="Shop Name"
                              Text="{Binding Shop, Mode=TwoWay}"/>
-                    <TextBox PlaceholderText="Price"
+                        <TextBox PlaceholderText="Price"
                              Text="{Binding Price, Mode=TwoWay}"/>
-                    <CheckBox Name="LocationCheckBox"
+                        <CheckBox Name="LocationCheckBox"
                               Content="add location as store"
                               Checked="OnAddLocationChecked" />
-                    <Button Name="btnSave"
+                        <Button Name="btnSave"
                             Content="Save"
                             Style="{StaticResource MainButtonStyle}"
                             Click="OnSaveButtonClick"/>
-                </ItemsControl>
-            </Grid>
+                    </ItemsControl>
+                </Grid>
+            </ScrollViewer>
             <Grid Name="navigation"
               Grid.Row="1">
                 <UserControls:NavigationUserControl />

@@ -15,7 +15,6 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
-
             <ScrollViewer VerticalScrollBarVisibility="Hidden">
                 <Grid Grid.Row="0">
                     <ItemsControl MaxWidth="500">
@@ -27,21 +26,21 @@
                                 <RowDefinition Height="200" />
                             </Grid.RowDefinitions>
                             <TextBlock Text="{Binding Title}"
-                           Grid.Row="0"
-                           FontSize="20"/>
+                                       Grid.Row="0"
+                                       FontSize="20"/>
                             <Image Source="{Binding Image}"
-                               Grid.Row="1"/>
+                                   Grid.Row="1"/>
                             <StackPanel Grid.Row="2" Orientation="Horizontal">
                                 <Button Name="btnLike" 
-                            Content="✅" 
-                            Style="{StaticResource LikeButtonStyle}"/>
+                                        Content="✔" 
+                                        Style="{StaticResource LikeButtonStyle}"/>
                                 <TextBlock Text="120"
-                               Style="{StaticResource LikeTBStyle}"/>
+                                           Style="{StaticResource LikeTBStyle}"/>
                                 <Button Name="btnDislike" 
-                            Content="✘"
-                            Style="{StaticResource LikeButtonStyle}"/>
+                                        Content="✖"
+                                        Style="{StaticResource LikeButtonStyle}"/>
                                 <TextBlock Text="20" 
-                               Style="{StaticResource LikeTBStyle}"/>
+                                           Style="{StaticResource LikeTBStyle}"/>
                             </StackPanel>
                             <Grid Grid.Row="3" Margin="0,20">
                                 <Grid.RowDefinitions>
@@ -93,12 +92,6 @@
                                         Grid.Row="4"
                                         Grid.ColumnSpan="2"
                                         Visibility="Collapsed"/>
-                                <Maps:MapControl Name="map" 
-                                        Grid.Row="4"
-                                        Grid.ColumnSpan="2"
-                                        Visibility="Collapsed"
-                                        MapServiceToken="sSsTsivhZQNwHhBc3n95~B-ePys5AGIZ06NP5tWa71A~AquVpSSJumKTyYAWAGtH6UbUqbxrw7pVWPpPereg1TXpkHFiqzvyf8EAv6c2Zfa5"/>
-
                             </Grid>
                         </Grid>
                     </ItemsControl>

@@ -4,8 +4,8 @@
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Navigation;
     using Windows.UI.Xaml;
-    using Windows.Devices.Geolocation;
     using System;
+
     public sealed partial class GiftDetailsPage : Page
     {
         public GiftDetailsPage()

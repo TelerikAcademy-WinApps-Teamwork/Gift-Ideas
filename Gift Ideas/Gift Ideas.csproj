@@ -105,7 +105,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\GiftModel.cs" />
-    <Compile Include="Models\UserDataModel.cs" />
     <Compile Include="Pages\AddGiftPage.xaml.cs">
       <DependentUpon>AddGiftPage.xaml</DependentUpon>
     </Compile>

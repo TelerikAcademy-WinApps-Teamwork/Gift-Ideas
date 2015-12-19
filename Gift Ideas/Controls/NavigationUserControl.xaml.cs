@@ -6,7 +6,7 @@
     using Windows.Media.Capture;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
-    using Windows.UI.Xaml.Media.Imaging;
+
     public sealed partial class NavigationUserControl : UserControl
     {
         public NavigationUserControl()

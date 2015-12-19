@@ -1,7 +1,6 @@
 ﻿namespace Gift_Ideas.ViewModels
 {
     using System;
-    using Windows.UI.Xaml.Controls;
 
     public class GiftViewModel
     {
