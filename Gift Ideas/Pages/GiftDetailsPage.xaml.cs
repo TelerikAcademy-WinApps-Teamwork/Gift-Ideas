@@ -27,7 +27,7 @@
         private async void OnLocationButtonClick(object sender, RoutedEventArgs e)
         {
             var gift = this.DataContext as GiftViewModel;
-            var uri = string.Format("bingmaps:?cp={0:0.000000}~-{1:0.000000}&lvl=16", gift.Location[0], gift.Location[1]);
+            var uri = string.Format("bingmaps:?cp={0:0.000000}~{1:0.000000}&lvl=16", gift.Location[0], gift.Location[1]);
             var shopUri = new Uri(uri);
 
             // Launch the Windows Maps app
